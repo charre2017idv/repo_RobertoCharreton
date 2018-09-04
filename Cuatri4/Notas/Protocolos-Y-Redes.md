@@ -78,11 +78,7 @@ La ISO (Organizacion Mundial de estandares) creo un modelo de referencia llamado
 
 La justificacion es que simplemente se esta abstrayendo la manera de comunicacion para plasmarlo en una computadora.
 
-Tarea: 
-
-- Investigar la historia del OSI
-- Proyecto Arpanet
-- Implicaciones de la guerra fria y de la Segunda Guerra Mundial en la tecnologia
+#### TAREA 1:
 
 #### Modelo OSI
 
@@ -90,7 +86,7 @@ Que es una red?
 
 Se le llama red, a un conjunto de dispositivos o computadoras que estan conectados entre si, su finalidad es poder compartir recursos entre ellos que facilitan y optimizan las tareas del usuario.
 
-Por los años 80 las redes crecian sin control, no existian ningun estandar para estas redes. Por lo tanto surge el modelo OSI, este modelo es creado por la ISO (Organizacion Internacional de estandarizacion), esta mosma creo un estandar que se debe de seguir para que todas la empresas se puedan comunicar sin redes independientes.
+Por los años 80 las redes crecian sin control, no existian ningun estandar para estas redes. Por lo tanto surge el modelo OSI, este modelo es creado por la ISO (Organizacion Internacional de estandarizacion), esta misma creo un estandar que se debe de seguir para que todas la empresas se puedan comunicar sin redes independientes.
 
 En el modelo OSI existen 7 capas:
 
@@ -106,7 +102,7 @@ En el modelo OSI existen 7 capas:
    - Segmenta la infromacion en pequeños paquetes de datos TCP u UDP.
 5. **Red: ** Direccionamiento y mejor ruta
 6. **Enlace de datos: ** Acceso a los medios
-7. **Física: ** Trnasmisión binaria
+7. **Física: ** Transmisión binaria
 
 Se lee desde la capa superior hacia la inferior cuando el mensaje va a salir y desde la inferior a la superior cuando el mensaje va a entrar.
 
@@ -129,6 +125,18 @@ Arpanet esta creada principalmente para la proteccion de la informacion, sin emb
 - ENIAC (Electronic Numerical Integrator And Computer): Utilizada por el laboratorio de investigacion Balistica del ejercito de los Estados Unidos. Se considera la primera computadora de proposito general junto con colossus.
 - Sputnik 1: Es el primer satelite artificial de la historia, crado por la union sovietica en 1957.
 - NASA: Se crea en 1958 para la investigacion aeroespacial. 
+
+
+
+#### TAREA 2: 
+
+#### IEEE: Protocolo 802
+
+#### Porque no se estaba de acuerdo con el protocolo 802? 
+
+#### Que es BPN? 
+
+#### Firewall
 
 ## Tema 2: 
 
