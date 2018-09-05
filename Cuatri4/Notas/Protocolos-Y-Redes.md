@@ -132,7 +132,75 @@ Arpanet esta creada principalmente para la proteccion de la informacion, sin emb
 
 #### IEEE: Protocolo 802
 
+IEEE (Institute of Electrical and Electronics Engineers) 802 es un proyecto que se identifica tambien por las siglas LMSC (LAN/MAN standard committee). Este se encarga de desarrollar estandares de red en area local (LAN) y redes de area metropolitana (MAN), este se encuentra en las dos capas inferiores del sistema OSI.
+
+IEEE se manifiesta principalmente sobre las rede de computadora. Se refiere a IEEE 802 para referirse al estandar que se propone, algunos son:
+
+- Ethernet (IEEE 802.3)
+- Wi - Fi (IEEE 802.11)
+- Bluetooth (IEEE 802.15), se esta intentando estandarizar.
+
+Este se centra en subdividir el sugundo nivel, el de enlace, en dos sub niveles:
+
+1. Enlace logico (LLC 802.2)
+2. Control de acceso medio (MAC)
+
+El resto de los estandares actuan en la capa fisica, como en el subnivel de acceso al medio.
+
+En febrero de [1980](https://es.wikipedia.org/wiki/1980) se formó en el IEEE un comité de redes locales con la intención de estandarizar un sistema de 1 o 2 Mbps que básicamente era Ethernet (el de la época). Le tocó el número 802. Decidieron estandarizar el nivel físico, el de enlace y superiores. Dividieron el nivel de enlace en dos subniveles: el de enlace lógico, encargado de la lógica de re-envíos, control de flujo y comprobación de errores, y el subnivel de acceso al medio, encargado de arbitrar los conflictos de acceso simultáneo a la red por parte de las estaciones.
+
+Para final de año ya se había ampliado el estándar para incluir el **Token Ring** ([red en anillo](https://es.wikipedia.org/wiki/Red_en_anillo) con paso de testigo) de [IBM](https://es.wikipedia.org/wiki/IBM) y un año después, y por presiones de grupos industriales, se incluyó [Token Bus](https://es.wikipedia.org/wiki/Token_Bus) ([red en bus](https://es.wikipedia.org/wiki/Red_en_bus) con paso de testigo), que incluía opciones de tiempo real y redundancia, y que se suponía idóneo para ambientes de fábrica.
+
+Cada uno de estos tres "estándares" tenía un nivel físico diferente, un subnivel de acceso al medio distinto pero con algún rasgo común (espacio de direcciones y comprobación de errores), y un nivel de enlace lógico único para todos ellos.
+
+Después se fueron ampliando los campos de trabajo, se incluyeron redes de área metropolitana (alguna decena de kilómetros), personal (unos pocos metros) y regional (algún centenar de kilómetros), se incluyeron redes [inalámbricas](https://es.wikipedia.org/wiki/Inal%C3%A1mbrico) ([WLAN](https://es.wikipedia.org/wiki/WLAN)), métodos de seguridad, comodidad, etc.
+
+**Grupos de Trabajo**
+
+|                                                              |                                                              |                            |
+| ------------------------------------------------------------ | :----------------------------------------------------------- | -------------------------- |
+| Nombre                                                       | Descripción                                                  | Nota                       |
+| [IEEE 802.1](https://es.wikipedia.org/wiki/IEEE_802.1)       | Normalización de interfaz                                    |                            |
+| [802.1d](https://es.wikipedia.org/wiki/IEEE_802.1D)          | *Spanning Tree Protocol*                                     |                            |
+| [802.1p](https://es.wikipedia.org/w/index.php?title=IEEE_802.1P&action=edit&redlink=1) | [Asignación de Prioridades de tráfico](https://es.wikipedia.org/w/index.php?title=Asignaci%C3%B3n_de_Prioridades_de_tr%C3%A1fico&action=edit&redlink=1) |                            |
+| [802.1q](https://es.wikipedia.org/wiki/IEEE_802.1Q)          | *Virtual Local Area Networks* ([VLAN](https://es.wikipedia.org/wiki/VLAN)) |                            |
+| [802.1x](https://es.wikipedia.org/wiki/IEEE_802.1X)          | [Autenticación en redes LAN](https://es.wikipedia.org/w/index.php?title=Autenticaci%C3%B3n_en_redes_LAN&action=edit&redlink=1) |                            |
+| [802.1aq](https://es.wikipedia.org/wiki/IEEE_802.1aq)        | [*Shortest Path Bridging* (SPB)](https://es.wikipedia.org/wiki/Shortest_Path_Bridging) |                            |
+| [IEEE 802.2](https://es.wikipedia.org/wiki/IEEE_802.2)       | [Control de enlace lógico (LLC)](https://es.wikipedia.org/wiki/Control_de_enlace_l%C3%B3gico) | Activo                     |
+| [IEEE 802.3](https://es.wikipedia.org/wiki/IEEE_802.3)       | [CSMA / CD](https://es.wikipedia.org/wiki/CSMA/CD) ([ETHERNET](https://es.wikipedia.org/wiki/Ethernet)) |                            |
+| [IEEE 802.3a](https://es.wikipedia.org/w/index.php?title=IEEE_802.3a&action=edit&redlink=1) | Ethernet delgada 10Base2                                     |                            |
+| [IEEE 802.3c](https://es.wikipedia.org/w/index.php?title=IEEE_802.3c&action=edit&redlink=1) | Especificaciones de Repetidor en Ethernet a 10 Mbps          |                            |
+| [IEEE 802.3i](https://es.wikipedia.org/w/index.php?title=IEEE_802.3i&action=edit&redlink=1) | Ethernet de par trenzado 10BaseT                             |                            |
+| [IEEE 802.3j](https://es.wikipedia.org/w/index.php?title=IEEE_802.3j&action=edit&redlink=1) | Ethernet de fibra óptica 10BaseF                             |                            |
+| [IEEE 802.3u](https://es.wikipedia.org/wiki/IEEE_802.3u)     | Fast Ethernet 100BaseT                                       |                            |
+| [IEEE 802.3z](https://es.wikipedia.org/w/index.php?title=IEEE_802.3z&action=edit&redlink=1) | Gigabit Ethernet parámetros para 1000 Mbps                   |                            |
+| [IEEE 802.3ab](https://es.wikipedia.org/w/index.php?title=IEEE_802.3ab&action=edit&redlink=1) | Gigabit Ethernet sobre 4 pares de cable UTP Cat5e o superior |                            |
+| [IEEE 802.3ae](https://es.wikipedia.org/w/index.php?title=IEEE_802.3ae&action=edit&redlink=1) | 10 Gigabit Ethernet                                          |                            |
+| [IEEE 802.4](https://es.wikipedia.org/wiki/IEEE_802.4)       | Token bus LAN                                                | Disuelto                   |
+| [IEEE 802.5](https://es.wikipedia.org/wiki/IEEE_802.5)       | Token ring LAN (topología en anillo)                         | Inactivo                   |
+| [IEEE 802.6](https://es.wikipedia.org/wiki/IEEE_802.6)       | Redes de Área Metropolitana (MAN) (ciudad) (fibra óptica)    | Disuelto                   |
+| [IEEE 802.7](https://es.wikipedia.org/w/index.php?title=IEEE_802.7&action=edit&redlink=1) | Grupo Asesor en Banda ancha                                  | Disuelto                   |
+| [IEEE 802.8](https://es.wikipedia.org/wiki/IEEE_802.8)       | Grupo Asesor en Fibras Ópticas                               | Disuelto                   |
+| [IEEE 802.9](https://es.wikipedia.org/wiki/IEEE_802.9)       | Servicios Integrados de red de Área Local (redes con voz y datos integrados) | Disuelto                   |
+| [IEEE 802.10](https://es.wikipedia.org/wiki/IEEE_802.10)     | [Seguridad de red](https://es.wikipedia.org/wiki/Seguridad_inform%C3%A1tica) | Disuelto                   |
+| [IEEE 802.11](https://es.wikipedia.org/wiki/IEEE_802.11)     | Redes inalámbricas WLAN. ([Wi-Fi](https://es.wikipedia.org/wiki/Wi-Fi)) |                            |
+| [IEEE 802.12](https://es.wikipedia.org/w/index.php?title=IEEE_802.12&action=edit&redlink=1) | Acceso de Prioridad por demanda 100 Base VG-Any Lan          | Disuelto                   |
+| [IEEE 802.13](https://es.wikipedia.org/w/index.php?title=IEEE_802.13&action=edit&redlink=1) | Se ha evitado su uso por superstición[2](https://es.wikipedia.org/wiki/IEEE_802#cite_note-2) | Sin uso                    |
+| [IEEE 802.14](https://es.wikipedia.org/wiki/IEEE_802.14)     | Módems de cable                                              | Disuelto                   |
+| [IEEE 802.15](https://es.wikipedia.org/wiki/IEEE_802.15)     | WPAN (Bluetooth)                                             |                            |
+| [IEEE 802.16](https://es.wikipedia.org/wiki/IEEE_802.16)     | Redes de acceso metropolitanas sin hilos de banda ancha (WIMAX) |                            |
+| [IEEE 802.17](https://es.wikipedia.org/wiki/IEEE_802.17)     | Anillo de paquete elástico script                            |                            |
+| [IEEE 802.18](https://es.wikipedia.org/wiki/IEEE_802.18)     | Grupo de Asesoría Técnica sobre Normativas de Radio          | En desarrollo a día de hoy |
+| [IEEE 802.19](https://es.wikipedia.org/wiki/IEEE_802.19)     | Grupo de Asesoría Técnica sobre Coexistencia                 |                            |
+| [IEEE 802.20](https://es.wikipedia.org/wiki/IEEE_802.20)     | *Mobile Broadband Wireless Access*                           |                            |
+| [IEEE 802.21](https://es.wikipedia.org/wiki/IEEE_802.21)     | Media Independent Handoff                                    |                            |
+| [IEEE 802.22](https://es.wikipedia.org/wiki/IEEE_802.22)     | *Wireless Regional Area Network*                             |                            |
+
+
+
 #### Porque no se estaba de acuerdo con el protocolo 802? 
+
+Salio al mismo tiempo que la OSI.
 
 #### Que es BPN? 
 
