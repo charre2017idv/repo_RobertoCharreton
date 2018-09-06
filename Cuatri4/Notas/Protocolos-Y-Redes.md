@@ -202,9 +202,69 @@ Después se fueron ampliando los campos de trabajo, se incluyeron redes de área
 
 Salio al mismo tiempo que la OSI.
 
-#### Que es BPN? 
+#### Que es VPN? 
+
+VPN (Virtual Private Network), **una privada virtual capaz de conectar varios dispositivos como si se encontrasen físicamente en el mismo lugar**, emulando las conexiones de redes locales. Virtual, porque conecta dos redes físicas; y privada, porque solo los equipos que forman parte de una red local de uno de los lados de la VPN pueden acceder.
+
+Funcion
+
+Al conectarnos a una VPN, lo haremos utilizando **una suerte de túnel**, un vocablo que se emplea para indicar que los datos se encuentran cifrados en todo momento, desde que entran hasta que salen de la VPN, y que se lleva a cabo mediante distintos protocolos que los protegen. Ahora bien, existe una excepción con el PPTP –utiliza una combinación de algoritmos inseguros como MS-CHAP v1/2-.
+
+Lo que hará nuestro sistema al tratar de visitar una página es **encapsular la petición** y mandarla a través de Internet a nuestro proveedor de VPN. Este los desencapsulará haciendo que sigan su curso habitual: saldrán por su router de red y, posteriormente, se reenviará el paquete.
+
+Ventajas
+
+Usar una VPN implica que podremos acceder a prácticamente cualquier lugar de la red sin ningún tipo de restricción geográfica, **sin importar dónde nos encontremos físicamente**. ¿La razón? Que nos permitirá acceder a través de varios servidores emplazados en otro lugar del mundo distinto al que nos hallamos.
+
+La **seguridad y privacidad** son otros puntos a su favor, en especial si necesitamos enviar o recibir información de carácter sensible a través de la red. Y si bien siempre podemos decantarnos por servicios proxy y herramientas que [ocultan la IP de nuestro dispositivo](https://www.nobbot.com/tecnologia/mi-conexion/cuarto-especial-sobre-los-routers-la-ip-que-es-como-funciona-puedo-ocultarla/), al decantarnos por una VPN estamos escogiendo establecer una conexión segura entre el ordenador y el servidor.
+
+Ya **en un contexto más empresarial**, hace posible que los empleados de una compañía **accedan remotamente a sus redes y servidores** sin que se vea comprometida la seguridad. Otra de sus virtudes es que no se trata de servicios demasiado caros y que incluso encontramos opciones que merecen la pena de manera gratuita.
 
 #### Firewall
+
+Un firewall es un dispositivo de seguridad de la red que monitorea el tráfico de red -entrante y saliente- y decide si permite o bloquea tráfico específico en función de un conjunto definido de reglas de seguridad.
+
+Los firewalls han constituido una primera línea de defensa en seguridad de la red durante más de 25 años. Establecen una barrera entre las redes internas protegidas y controladas en las que se puede confiar y redes externas que no son de confianza, como Internet. 
+
+Un firewall puede ser hardware, software o ambos.
+
+Tipos de FireWall
+
+**Firewall proxy**
+
+Un firewall proxy, uno de los primeros tipos de dispositivos de firewall, funciona como gateway de una red a otra para una aplicación específica. Los servidores proxy pueden brindar funcionalidad adicional, como seguridad y almacenamiento de contenido en caché, evitando las conexiones directas desde el exterior de la red. Sin embargo, esto también puede tener un impacto en la capacidad de procesamiento y las aplicaciones que pueden admitir.
+
+**Firewall de inspección activa**
+
+Un firewall de inspección activa, ahora considerado un firewall “tradicional”, permite o bloquea el tráfico en función del estado, el puerto y el protocolo. Este firewall monitorea toda la actividad, desde la apertura de una conexión hasta su cierre. Las decisiones de filtrado se toman de acuerdo con las reglas definidas por el administrador y con el contexto, lo que refiere a usar información de conexiones anteriores y paquetes que pertenecen a la misma conexión.
+
+**Firewall de administración unificada de amenazas (UTM)**
+
+Un dispositivo UTM suele combinar en forma flexible las funciones de un firewall de inspección activa con prevención de intrusiones y antivirus. Además, puede incluir servicios adicionales y, a menudo, administración de la nube. Los UTM se centran en la simplicidad y la facilidad de uso.
+
+**Firewall de próxima generación (NGFW)**
+
+Los firewalls han evolucionado más allá de la inspección activa y el filtrado simple de paquetes. La mayoría de las empresas están implementando firewalls de próxima generación para bloquear las amenazas modernas, como los ataques de la capa de aplicación y el malware avanzado.
+
+Según la definición de Gartner, Inc., un firewall de próxima generación debe incluir lo siguiente:
+
+- Funcionalidades de firewall estándares, como la inspección con estado
+- Prevención integrada de intrusiones
+- Reconocimiento y control de aplicaciones para ver y bloquear las aplicaciones peligrosas
+- Rutas de actualización para incluir fuentes de información futuras
+- Técnicas para abordar las amenazas de seguridad en evolución
+
+Si bien estas funcionalidades se están convirtiendo cada vez más en el estándar para la mayoría de las empresas, los NGFW pueden hacer más.
+
+**NGFW centrado en amenazas**
+
+Estos firewalls incluyen todas las funcionalidades de un NGFW tradicional y también brindan funciones de detección y corrección de amenazas avanzadas. Con un NGFW centrado en amenazas, puede hacer lo siguiente:
+
+- Estar al tanto de cuáles son los activos que corren mayor riesgo con reconocimiento del contexto completo
+- Reaccionar rápidamente ante los ataques con automatización de seguridad inteligente que establece políticas y fortalece las defensas en forma dinámica
+- Detectar mejor la actividad sospechosa o evasiva con correlación de eventos de terminales y la red
+- Reducir significativamente el tiempo necesario desde la detección hasta la eliminación de la amenaza con seguridad retrospectiva que monitorea continuamente la presencia de actividad y comportamiento sospechosos, incluso después de la inspección inicial
+- Facilitar la administración y reducir la complejidad con políticas unificadas que brindan protección en toda la secuencia del ataque
 
 ## Tema 2: 
 
