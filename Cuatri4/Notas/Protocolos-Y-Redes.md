@@ -266,5 +266,128 @@ Estos firewalls incluyen todas las funcionalidades de un NGFW tradicional y tamb
 - Reducir significativamente el tiempo necesario desde la detección hasta la eliminación de la amenaza con seguridad retrospectiva que monitorea continuamente la presencia de actividad y comportamiento sospechosos, incluso después de la inspección inicial
 - Facilitar la administración y reducir la complejidad con políticas unificadas que brindan protección en toda la secuencia del ataque
 
+**EJERCICIO 1**
+**IPV4**
+IPV4 (Protocolo de Internet nivel 4), es un protocolo de interconexión de redes basados en internet y fue la
+primera versión implementada para la producción de Arpanet, en 1983. IPv4 usa direcciones de 32 bits,
+limitándola a 2^32= 4 294 967 296 direcciones únicas, muchas de las cuales están dedicadas a redes locales (LAN).
+**IPV6**
+IPV6, posee direcciones con una longitud de 128 bits, es decir 2^128 posibles direcciones
+(340.282.366.920.938.463.463.374.607.431.768.211.456), o dicho de otro modo, 340 sextillones.
+El despliegue de IPv6 se irá realizando gradualmente, en una coexistencia ordenada con IPv4, al que irá
+desplazando a medida que dispositivos de cliente, equipos de red, aplicaciones, contenidos y servicios se
+vayan adaptando a la nueva versión del protocolo de Internet.
+**IP Publica**
+Una dirección IP está formada por cuatro grupos de entre 1 y tres dígitos separados por puntos, tienen
+una longitud de 32 bits y constan de dos campos, uno que es el identificador de red y corresponde con el
+primer grupo de números, y el identificador de host, que son los otros tres grupos restantes.
+La pública es el identificador de nuestra red desde el exterior, es decir, la de nuestro router de casa, que es
+el que es visible desde fuera, mientras que la privada es la que identifica a cada uno de los dispositivos
+conectados a nuestra red, por lo tanto, cada una de las direcciones IP que el router asigna a nuestro
+ordenador, móvil, tablet o cualquier otro dispositivo que se esté conectado a él.
+**Mac Address**
+
+La Mac Address o dirección Mac es una identificador único de 48 bits para identificar la totalidad de
+dispositivos de red como por ejemplo tarjetas de red Ethernet, tarjetas de red wifi o inalambricas, Switch
+de red, Routers, impresoras, etc.
+La totalidad de fabricantes en el momento de fabricar el hardware, como por ejemplo una tarjeta de
+red wifi, graban la Mac Address en formato binario en una memoria ROM del dispositivo que están
+fabricando. Como la memoria ROM es solo de lectura es totalmente imposible modificarla y por lo tanto
+esto implica que la Mac address o identificador de un dispositivo nunca lo podremos modificar. No
+obstante en futuros post veremos que **es posible hacer creer a otras personas o a integrantes de la red
+que nuestra MAC Address es otra diferente a la real.**
+El motivo por el cual es posible modificar la MAC de la tarjeta de red de nuestro ordenador es simple.
+Cuando se arranca nuestro ordenador la tarjeta de red copia la dirección MAC a nuestra memoria RAM. Una
+vez copiada la Mac Address a la memoria RAM la totalidad de veces que se requiere de la Mac Address se
+usará la Mac Address almacenada en la memoria RAM. Por lo tanto si queremos cambiar nuestra Mac
+Address tan solo tenemos que modificar la Mac Address almacenada en nuestra memoria RAM y esto si
+que es posible.
+**Que es un puerto?**
+Punto por donde se conecta la unidad central de la computadora con otros periféricos o aparatos externos,
+como la impresora, el módem, etc.
+**Topologia de red**
+La topología es el arreglo (físico o lógico) donde los dispositivos o nodos de una red, se interconectan sobre
+un medio de comunicación. La topología en una red determina la forma de comunicación entre sus
+nodos.La topología en una red determina la forma de comunicación entre sus nodos. Existen topologías
+donde la intercomunicación entre sus nodos es sencilla y otras donde es compleja. La mala elección de una
+topología puede ocasionar que la red no opere de manera eficiente. Una topología determina el número de
+nodos que se conectarán, el método de acceso múltiple, tiempo de respuesta, velocidad de la información,
+costo, tipo de aplicaciones, etcétera.
+Las topologías pueden ser de dos tipos:
+Topología física: Se refiere al diseño actual del medio de transmisión de la red.
+Topología lógica: Se refiere a la trayectoria lógica que una señal a su paso por los nodos de la red.
+TOPOLOGÍA FÍSICAS Las topologías físicas más comunes son: ducto, estrella, anillo, malla y las híbridas.
+Cada una de éstas tiene sus ventajas y desventajas, así como sus aplicaciones específicas.
+Topología de ducto (bus)
+Una topología de ducto o bus está caracterizada por una dorsal principal con dispositivos de red
+interconectados a lo largo de la dorsal. Las redes de ductos son consideradas como topologías pasivas. Las
+computadoras "escuchan" al ducto. Cuando éstas están listas para transmitir, ellas se aseguran que no haya
+nadie más transmitiendo en el ducto, y entonces ellas envían sus paquetes de información. Usualmente
+utilizan Ethernet.
+En ambientes MAN (Metropolitan Area Network), las compañías de televisión por cable utilizan esta
+topología para extender sus redes.
+Topología de estrella (star)
+En una topología de estrella, las computadoras en la red se conectan a un dispositivo central conocido
+como concentrador (hub en inglés) o a un conmutador de paquetes (swicth en inglés).
+En un ambiente LAN cada computadora se conecta con su propio cable (típicamente par trenzado) a un
+puerto del hub o switch. Este tipo de red sigue siendo pasiva, utilizando un método basado en contensión,
+las computadoras escuchan el cable y contienden por un tiempo de transmisión.
+Debido a que la topología estrella utiliza un cable de conexión para cada computadora, es muy fácil de
+expandir, sólo dependerá del número de puertos disponibles en el hub o switch (aunque se pueden
+conectar hubs o switchs en cadena para así incrementar el número de puertos). La desventaja de esta
+topología en la centralización de la comunicación, ya que si el hub falla, toda la red se cae.
+La topología estrella extendida en un ambiente LAN es fácil de configurar, de costo accesible, y tiene más
+redundancia que la topología de ducto. En vez de conectar todos los dispositivos a un nodo central, los
+nodos se conectarán a otros dispositivos subcentrales, permitiendo más funcionalidad para establecer
+subredes y creando también más puntos de falla. Mientras la topología de estrella fue hecha para redes
+pequeñas, la topología estrella extendida se adapta mejor a redes grandes.
+Un ejemplo aplicado de una topología estrella extendida, en un ambiente MAN, es la telefonía celular. El
+nodo central es el conmutador que se encarga de establecer la comunicación entre las terminales móviles.
+Al conmutador central se conectan vía enlace de microondas, las radiobases o antenas de telefonía celular.
+A su vez, las radiobases se conectan vía frecuencias de telefonía celular a las terminales móviles.
+Topología de anillo (ring) Una topología de anillo conecta los dispositivos de red uno tras otro sobre el
+cable en un círculo físico. La topología de anillo mueve información sobre el cable en una dirección y es
+considerada como una topología activa. Las computadoras en la red retransmiten los paquetes que reciben
+y los envían a la siguiente computadora en la red. El acceso al medio de la red es otorgado a una
+computadora en particular en la red por un "token". El token circula alrededor del anillo y cuando una
+computadora desea enviar datos, espera al token y posiciona de él. La computadora entonces envía los
+datos sobre el cable. La computadora destino envía un mensaje (a la computadora que envió los datos) que
+de fueron recibidos correctamente. La computadora que transmitio los datos, crea un nuevo token y los
+envía a la siguiente computadora, empezando el ritual de paso de token o estafeta (token passing)
+nuevamente.
+La topología de anillo es muy utlizada en redes CAN y MAN, en enlaces de fibra óptica SONET, SDH y FDDI
+en redes de campus.
+**Topología de malla (mesh)**
+La topología de malla (mesh) utiliza conexiones redundantes entre los dispositivos de la red aí como una
+estrategía de tolerancia a fallas. Cada dispositivo en la red está conectado a todos los demás (todos
+conectados con todos). Este tipo de tecnología requiere mucho cable (cuando se utiliza el cable como
+medio, pero puede ser inalámbrico también). Pero debido a la redundancia, la red puede seguir operando si
+una conexión se rompe.
+Las redes de malla, obviamente, son mas difíciles y caras para instalar que las otras topologías de red
+debido al gran número de conexiones requeridas.
+La red Internet utiliza esta topología para interconectar las diferentes compañías telefónicas y de
+proveedoras de Internet, mediante enlaces de fibra óptica.
+Tema
+
 ## Tema 2: 
+
+Protocolo TCP y UDP
+
+TCP: Envia los paquetes y se asegura de recibir los paquetes para revisar que la informacion este completa. (Cosas seguras)
+
+#### TAREA
+
+#### TCP y UDP
+
+#### Capa de transporte
+
+#### Comandos windows y linux para manejo de redes
+
+#### Puertos de windows para comunicacion
+
+
+
+
+
+
 
