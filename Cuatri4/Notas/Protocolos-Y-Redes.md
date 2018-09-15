@@ -379,13 +379,103 @@ TCP: Envia los paquetes y se asegura de recibir los paquetes para revisar que la
 
 #### TCP y UDP
 
+UDP significa User Datagram Protocol, proporciona un servicio no orientado a conexión y no fiable, esto quiere decir que se va a intentar por todos los medios que los datos lleguen, pero no lo garantiza.
+
+TCP significa Transmission Control Protocol, proporciona un servicio orientado a conexión y fiable. Tanto TCP como UDP trabajan sobre el protocolo de la capa de red de Internet, que es el protocolo IP.
+
+IP proporciona una comunicación lógica entre hosts. IP es “best effort”, es decir, no garantiza que pueda entregar los segmentos entre los hosts pero hará lo que pueda para hacerlo correctamente.
+
+- No garantiza la llegada de los segmentos.
+- No garantiza el orden.
+- No garantiza la integridad (que si llegan, lleguen correctos).
+
+Por todo esto, IP es un servicio no fiable.
+
+Antes de continuar, debemos tener claro que cada host ha de tener una dirección IP. Lo que hace TCP y UDP es ampliar el servicio que proporciona IP entre dos host, de esta forma podremos tener varios procesos ejecutándose en los host y podremos comunicarnos con ellos. Eso se llama multiplexación y demultiplexación de la capa de transporte.
+
+TCP y UDP proporcionan servicios de comprobación de errores. UDP sólo proporciona esta comprobación y la entrega de datos de proceso a proceso en cada host, recordemos que UDP es no fiable y no garantiza la integridad (como IP).
+
+TCP sí proporciona una transferencia de datos fiable, también proporciona control de flujo, números de secuencia, mensajes de reconocimiento y temporizadores. TCP garantiza que los mensajes se envíen correctamente (control de errores,evitar datos duplicados y recuperación ante pérdidas) y en orden. TCP al estar sobre IP, convierte IP en un servicio de transporte de datos fiable.
+
+TCP también nos proporciona control de congestión, para no colapsar los enlaces (routers, nodos intermedios) y que la intensidad de tráfico se acerque peligrosamente a 1 y empiecen los encolamientos, e incluso la pérdida de paquetes por llenar los buffers de los routers. TCP se encarga de asignar el mismo ancho de banda a todas sus conexiones para que todas ellas puedan enviar y recibir datos.
+
+UDP no proporciona control de congestión, por tanto podrá enviar los datos a cualquier velocidad sin tener en cuenta la posible saturación de los nodos.
+
 #### Capa de transporte
+
+El nivel de **transporte** o **capa de transporte** es el cuarto nivel del modelo OSI, y está encargado de la transferencia libre de errores de los datos entre el emisor y el receptor, aunque no estén directamente conectados, así como de mantener el flujo de la red. Es la base de toda la jerarquía de protocolo.
 
 #### Comandos windows y linux para manejo de redes
 
+### Manejo de redes en Windows con CMD
+
+Una vez hemos accedido a esta línea de comandos podremos **comunicarnos directamente con el equipo**y realizar una serie de tareas. Aunque se trata de una interfaz de texto, podemos personalizarla en diseño, colores o fuentes accediendo a su propiedades mediante un clic secundario en el marco del CMD.
+
+**Su funcionamiento es sencillo**: escribimos el comando (y sus modificadores en su caso) y la aplicación CMD hace de intérprete para su ejecución. Hay muchos comandos que podemos utilizar para una amplia variedad de tareas. 
+
+#### **ipconfig**
+
+Es uno de los comandos para redes más útiles. Informa de los valores de configuración de red TCP/IP actuales y actualiza la configuración del protocolo DHCP y el sistema de nombres de dominio (DNS).
+
+#### **ping**
+
+Prueba el estado de la comunicación del host local con uno o varios equipos remotos de una red IP. Por medio del envío de paquetes ICMP, diagnostica el estado, velocidad y calidad de una red determinada.
+
+#### **tracert**
+
+Permite conocer los paquetes que vienen desde un host (punto de red). También se obtiene una estadística del RTT o latencia de red de esos paquetes, ofreciendo una estimación de la distancia a la que están los extremos de la comunicación. 
+
+#### **pathping**
+
+Combina la utilidad de ping y tracert. Es más informativo, por lo que tarda más tiempo para ejecutar. Después de enviar los paquetes a un destino determinado, se analiza la ruta tomada y se calcula la pérdida de paquetes y proporciona detalles entre dos host.
+
+#### **getmac**
+
+Obtiene la mac del equipo donde se ejecuta. La dirección MAC es un identificador de 48 bits determinado y configurado por el IEEE y el fabricante (24 bits cada uno). Conocida también como dirección física es única para cada dispositivo.
+
+#### **nslookup**
+
+Se emplea para conocer si el DNS está resolviendo correctamente los nombres y las IPs. También nos permite averiguar la dirección IP detrás de un determinado nombre de dominio. Si deseas convertir una dirección IP en un nombre de dominio, sólo tienes que escribirlo en el navegador y ver a donde conducen.
+
+#### **netstat**
+
+Comando potente que muestra estadísticas de la red y permite diagnósticos y análisis. Por defecto, muestra un listado de las conexiones activas de una computadora, tanto entrantes como salientes. Incluye el protocolo en uso, las tablas de ruteo, las estadísticas de las interfaces y el estado de la conexión.
+
+#### **netsh**
+
+Sinónimo de shell de red, permite modificar, administrar y diagnosticar la configuración de una red, con más detalle y potencia que los anteriores. Un comando avanzado que ofrece un montón de opciones utilizando sus modificadores y que como ejemplo, permite cambiar el DNS primario y secundario de un equipo.
+
+
+
+LINUX
+
+https://www.nettix.com.pe/documentacion/administracion/linux-administracion/10-comandos-linux-para-el-diagnostico-de-red
+
+
+
 #### Puertos de windows para comunicacion
 
+En Windows Server 2008 y versiones posteriores, y en Windows Vista y versiones posteriores se ha cambiado el intervalo de puertos dinámicos predeterminado por el siguiente:
 
+- Puerto inicial: 49152
+- Puerto final: 65535
+
+Windows 2000, Windows XP y Windows Server 2003 usan el intervalo de puertos dinámicos siguiente: 
+
+- Puerto inicial: 1025
+- Puerto final: 5000
+
+Qué significa:
+
+- Si el entorno de red de equipos usa solo Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7 o Windows Vista, debe habilitar la conectividad en el intervalo de puertos alto del 49152 al 65535.
+- Si el entorno de red de equipos usa solo Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7 o Windows Vista, junto con versiones de Windows anteriores a Windows Server 2008 y Windows Vista, debe habilitar la conectividad en ambos intervalos de puertos siguientes:
+  - Intervalo de puertos alto, del 49152 al 65535
+  - Intervalo de puertos bajo, del 1025 al 5000
+- Si el entorno de red de equipos usa solo versiones de Windows anteriores a Windows Server 2008 y Windows Vista, debe habilitar la conectividad en el intervalo de puertos bajo del 1025 al 5000.
+
+Para obtener más información acerca del intervalo predeterminado de puertos dinámicos en Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 y Windows Vista, haga clic en el número de artículo siguiente para verlo en Microsoft Knowledge Base:
+
+[929851 ](https://support.microsoft.com/es-es/help/929851)El intervalo de puertos dinámicos predeterminado para TCP/IP ha cambiado desde Windows Vista y en Windows Server 2008
 
 
 
