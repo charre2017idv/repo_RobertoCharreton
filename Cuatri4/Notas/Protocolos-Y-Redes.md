@@ -477,6 +477,16 @@ Para obtener más información acerca del intervalo predeterminado de puertos di
 
 [929851 ](https://support.microsoft.com/es-es/help/929851)El intervalo de puertos dinámicos predeterminado para TCP/IP ha cambiado desde Windows Vista y en Windows Server 2008
 
+## Tema 3
+
+#### Arquitectura Tipo servidor P2P
+
+La arquitectura cliente servidor es donde muchos clientes se comunican entre si, por medio de un unico servidor. Es decir, el servidor es un intermediario, entre todos sus clientes.
+
+La arquitectura P2P es una red de ordenadores en la que todos o algunos aspectos, funcionan sin clientes ni servidores fijos. Si no una serie de nodos, que se comportan como iguales entre si. 
+
+Las aplicaciones P2P usualmente se usan para compartir grandes volumenes de informacion.
+
 
 
 
