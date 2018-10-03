@@ -338,3 +338,53 @@ Ways of tracking:
 - In - Order: Left, Root, Right. (The numbers are in order)
 - Post - Order: Left, right, root.
 
+## Clase 4
+
+#### Factory Method
+
+We pass the different object that returns a new value on a switch, this pattern doesn't have sub classes, is more information but it depends on the implementation. This methods are static, so we don't need to create an object of the class, instead we initialize the object:
+
+````c++
+widgetFactory::CreateWindow(0);
+````
+
+#### Singleton
+
+Is used when we use only one instance to all the system.
+
+````c++
+// ============================== .h
+class Logger
+{
+    public:
+    static Logger *getInstance(); // Return a pointer to the class
+    void Log(std::string x); // get an instance of the class
+    private:
+    static Logger * m_instance;	// Need to be initialize on .cpp global	
+    Logger();
+}
+// ============================== .cpp
+Logger* Logger::m_instance = null;
+Logger * Logger::getInstance()
+{	// Check if the instance is null
+    if(m_instance == nullptr)
+    {	// Create the instance
+        m_instance == new Logger();
+    } // else, return the instance
+    return m_instance;
+}
+
+// ============================== Is correct
+Logger * log Logger::getInstance(); // Correct
+Logger * log2 = new Logger(); // The constructor is private
+Logger log3; // Is not pointer
+````
+
+
+
+## Homework
+
+### Builder
+
+### Prototype
+

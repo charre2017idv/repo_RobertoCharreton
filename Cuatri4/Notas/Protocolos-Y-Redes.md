@@ -489,5 +489,63 @@ Las aplicaciones P2P usualmente se usan para compartir grandes volumenes de info
 
 
 
+#### Puerto 25 
 
+#### Puerto 80 
 
+#### Puerto 22 
+
+#### Puerto 441 
+
+#### Puerto 3306
+
+#### Herramientas de trabajo XAMPP y VirtualB
+
+#### Protocolos 
+
+http
+
+ftp
+
+https
+
+ssl
+
+#### Cables de conexion
+
+#### Niveles de conexion
+
+## Clase 1 - Parcial 2
+
+Sockets, basada en una tecnologia linux, este objeto en windows y en linux un numero es el que permite la comunicacion entre el protocolo IPv4 con el protocolo TCP y UDP, y un puerto de conexion. Los sockets no los maneja el programa pero si el sistema operativo.
+
+### Introduccion a los sockets
+
+**Servidor Socket**
+
+1. Create the socket - Get the file description
+2. Bind to an address - What port am I on
+3. Listen on a port, and wait for a connection to be established
+4. Accept the connection from a client
+5. Send / recv - The same way we read and write for a file
+6. Shutdown to end read / write
+7. Close to releases data.
+
+**Client Socket**
+
+1. Create a socket
+2. Bind* - this is probably be unnecessary because you're the client, not the server
+3. Connect to a server.
+4. Send / recv - Repeat until we have or receive data
+5. Shutdown to end read / write
+6. Close to release data 
+
+**Functions to use sockets**
+
+1. int sockets (int domain, int type, int protocol)
+2. int bind(int fd, struct sockaddr *local_addr,  socklen,)
+3. int listen(int fd, int backlog_queue_size)
+4. int accept(int fd, struct sockaddr, *remote_host, socklen_t addr_length)
+5. int connect(int fd, struct sockaddr *remote_host, socklen_t adr_lenght)
+6. int send(int fd, void *buffer, size_t m, int flags)
+7. int receive(int fd, void *buffer, size_t n, int flags)
