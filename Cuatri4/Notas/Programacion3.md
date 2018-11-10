@@ -388,3 +388,78 @@ Logger log3; // Is not pointer
 
 ### Prototype
 
+## Grid
+
+````c++
+// GridGame
+gridGame:public CApp
+{
+private: 
+	Grid * m_pGrid; // Este representa el grid completo
+	vector <CGameobject*> m_pGameObjects;// Lista master de objetos
+	vector <3DObject*> m_pMeshes;
+	initialize(); //  m_inGrid = new Grid(...)
+}
+
+// CGameObject
+CGameObject
+{
+	C3Dobject * m_pMesh;
+	float m_scale;
+}
+
+
+// CGrid
+CGrid
+{
+private:
+    GridCell * m_pGridCell; // Este apuntador, apunta a todas las celdad
+    int m_size; // 3
+    int m_cellsize;
+    void buildWorld(); // Coordenadas de nuestros objetos
+    void Load3DObjects(); // Cargar diferentes modelos de meshes
+    // Para cada celda calcular los 6 vertices 
+	// en este for de define el tipo de grid, pointy o flat
+}
+
+// GridCell - Representa cada celda
+CGridCell
+{
+	CGameobject *m_pGameobject; // Se enlaza con m_gameObjects
+	CVector3D m_pVertices[6]; // En base a estos vertices , realizar triangulos para render.
+	CVector3D m_CenterPoint;
+	int x, y , z; // No se esta seguro si sera necesario para calcular la coordenada
+}
+
+
+````
+
+## Threads and Process
+
+````c++
+BOOL CreateProcessA(
+  LPCSTR                lpApplicationName,     	 // Direccion completa de ejecutable
+  LPSTR                 lpCommandLine,			// Linea de comandos o NULL
+  LPSECURITY_ATTRIBUTES lpProcessAttributes,  	 // Definir si Kernel objects se pueden hederar
+  LPSECURITY_ATTRIBUTES lpThreadAttributes,		 // NULL
+  BOOL                  bInheritHandles,     	 // False
+  DWORD                 dwCreationFlags,		 // 0 
+  LPVOID                lpEnvironment, 			 // omitir
+  LPCSTR                lpCurrentDirectory,		 // omitir
+  LPSTARTUPINFOA        lpStartupInfo,			 // omitir
+  LPPROCESS_INFORMATION lpProcessInformation	 // Se crea variable y se le pasa
+);
+````
+
+````c++
+HANDLE CreateThread(
+  LPSECURITY_ATTRIBUTES   lpThreadAttributes, 		// NULL
+  SIZE_T                  dwStackSize,			    // 0 - tamano del stack
+  LPTHREAD_START_ROUTINE  lpStartAddress,			// Nombre de la funcion para ejecutar en el thread, DWORD WINAPI MyThreadFunc(LPVOID param); esto es para que windows lo reconozca 
+  __drv_aliasesMem LPVOID lpParameter,				// Parametro para el thread LPVOID -  Es asi porque se tiene que castear 
+  DWORD                   dwCreationFlags,			// 0
+  LPDWORD                 lpThreadId				// Se crea variable DWORD threadID y se pasa la referencia &threadID. Es un identificador que le da windows al thread
+);
+/* Cuando se crea un hilo a los K.O. Se le pueden asignar parametros de seguridad para poder revisar lo que se esta modificando, en este caso no se utilizara*/
+````
+

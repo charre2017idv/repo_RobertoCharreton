@@ -549,3 +549,77 @@ Sockets, basada en una tecnologia linux, este objeto en windows y en linux un nu
 5. int connect(int fd, struct sockaddr *remote_host, socklen_t adr_lenght)
 6. int send(int fd, void *buffer, size_t m, int flags)
 7. int receive(int fd, void *buffer, size_t n, int flags)
+
+## Proxy 
+
+## ¿Qué es un Proxy y para qué sirve?
+
+Un proxy es un ordenador intermedio que se usa en la comunicación de otros dos. La información (generalmente en Internet) va directamente entre un ordenador y otro. Mediante un proxy, la información va, primero, al ordenador intermedio (proxy), y éste se lo envía al ordenador de destino, de manera que no existe conexión directa entre el primero y el último.
+
+En casi la totalidad de los casos, el proxy sólo sirve para ocultarse, y la mayoría de las veces estos proxies se usan para realizar prácticas ilegales (spam, fraudes, etc.). Es por ello, por lo que siempre es deseable evitar los proxies, sobre todo cuando son servidores de foros, chat o redes sociales.
+
+### ¿Cómo se monta un proxy?
+
+Pues  con una IP dinámica, un servidor, un dominio, configurar el servidor (Linux o Windows) para ello, una sencilla página web, banners de publicidad y promocionarse (anunciarse).
+
+### Ventajas
+
+- Menos tiempo de configuración (sólo hay que configurar el proxy).
+- Mayor seguridad
+- Filtrados más eficientes
+- Velocidad
+- En otros casos la mayor ventaja, sin duda, es:
+- El anonimato
+
+### Desventajas
+
+- Carga. El proxy puede verse sometido a demasiada carga si muchos ordenadores realizan peticiones de forma simultánea.
+- Caché de datos entre 2 ordenadores. Algunos proxies pueden guardar copias de las transferencias, lo que supone cierta intromisión e inseguridad.
+- Desactualización. En algunos proxies la información más actual puede verse afectada.
+
+### Tipos de proxy
+
+- Proxy web.
+- Proxy inverso.
+- Proxy NAT.
+- Proxy transparente.
+- Proxy abierto.
+
+## Hacking Etico
+
+El hacking ético analiza los sistemas y programas informáticos corporativos, asumiendo el rol de un ciberdelincuente y simulando ataques a la empresa con el objetivo de evaluar el estado real de si seguridad TI. Para llevar a cabo este hacking ético es imprescindible contar con la autorización expresa de la empresa, plasmada en un contrato donde se indiquen las obligaciones que debe cumplir el auditor (confidencialidad, integridad, secreto profesional, límites de la auditoría, etc.). El resultado final indica los puntos débiles de la empresa y que pasos se deben realizar para eliminar dichas debilidades o mitigarlas caso de no ser posible su eliminación.
+
+### Ventajas
+
+- Adelantarse a los posibles cibercriminales solucionando vulnerabilidades que pueden provocar un ciberataque.
+
+- Concienciar a los profesionales de las compañías de la importancia de la seguridad informática en su trabajo diario.
+
+- Mejora sus procesos de seguridad (actualización de software, plan de respuesta a incidentes, etc.). 
+
+**Acuerdo de Auditoría**: consiste en elaborar un documento, consensuado con el cliente, que refleje el alcance de la auditoría, qué pruebas se van a realizar, qué obligaciones tiene el auditor, el nivel de permisividad de la empresa frente a las pruebas de ataques que se realicen, etc.
+
+**Recopilación de Informació**n: En esta fase el auditor tratará de recabar toda la información posible sobre su objetivo (empresa o aplicación). Para ello emplea las más diversas herramientas, desde simples búsquedas en Google, Bing, etc. hasta el empleo de herramientas como NMap y similares en búsqueda de puntos de entrada a la aplicación y/o empresa. Se busca información de todo tipo entre las que podemos mencionar:
+
+- Información sobre empleados: direcciones de emails, nombres de usuarios, información personal (estilo de vida, gustos sobre ocio, foros donde estén inscritos, etc.) para tratar de adivinar su contraseña en base a dicha información, cargo que ostentan en la organización, etc.
+
+- Información corporativa: a que se dedica la empresa, direcciones url de la empresa (internet e intranet), DNS que utiliza, que empresa les da hosting, directorios y archivos expuestos, servicios abiertos en los servidores de la empresa (http, https, ftp, ssh, etc.), versiones que ofrece de dichos servicios, sistemas operativos que emplea la empresa,   documentación filtrada en internet buscando en sus metadatos, búsqueda de información relevante en comentarios en código de la página, etc. 
+
+ **Modelado de Amenazas**: Con la información proporcionada, se define la importancia de los activos de la empresa y se crean árboles de ataque con posibles amenazas que puedan afectar a los activos objetivo de la auditoría.
+
+**Análisis de Vulnerabilidades**: De forma activa se buscan puertos y servicios existentes para localizar vulnerabilidades. Se usan recursos como bases de datos de vulnerabilidades de aplicaciones, exploits que exploten dichas vulnerabilidades. Se usan herramientas manuales y automáticas de escaneo de vulnerabilidades para descubrirlas.
+
+**Explotacion:** El auditor confirma que el riesgo es real por lo que esta expuesta la escuela.
+
+**Post-explotación:** El auditor recopilará evidencias de que la fase de explotación ha tenido éxito, valorará el impacto real que pueda tener la explotación para la empresa y tratará de llegar lo más adentro de la organización que pueda vulnerando otros ordenadores internos, creando puertas traseras para posteriores accesos, etc.
+
+**Reporte: el auditor** Finalmente, el auditor elaborará un informe detallado con todas las vulnerabilidades detectadas, como explotarlas y como corregirlas o mitigarlas.
+
+Posteriormente, se elaborará un **Plan de Mitigación de Vulnerabilidades** en el siguiente ciclo de desarrollo y un seguimiento de las vulnerabilidades detectadas para confirmar la eliminación de las mismas.
+
+
+
+
+
+
+
